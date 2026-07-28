@@ -1,164 +1,541 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses | Prof. Supantha Pandit</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body{
-            margin:0;
-            font-family:Arial, Helvetica, sans-serif;
-            background:#f4f4f4;
-        }
+<title>IT2025 - Data Structures | Prof. Supantha Pandit</title>
 
-        header{
-            background:#003366;
-            color:white;
-            text-align:center;
-            padding:30px;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-        nav{
-            background:#00509e;
-            padding:10px;
-            text-align:center;
-        }
+<style>
 
-        nav a{
-            color:white;
-            text-decoration:none;
-            margin:15px;
-            font-weight:bold;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        .container{
-            width:85%;
-            margin:auto;
-            padding:20px;
-        }
+body{
 
-        .course{
-            background:white;
-            margin:20px 0;
-            padding:20px;
-            border-radius:8px;
-            box-shadow:0 2px 8px rgba(0,0,0,0.1);
-        }
+    font-family:'Inter',sans-serif;
+    background:#eef3f9;
+    color:#222;
+    line-height:1.6;
 
-        h2{
-            color:#003366;
-        }
+}
 
-        footer{
-            background:#003366;
-            color:white;
-            text-align:center;
-            padding:15px;
-            margin-top:40px;
-        }
+/* ================= HEADER ================= */
 
-        ul{
-            line-height:1.8;
-        }
+header{
 
-        .button{
-            display:inline-block;
-            padding:10px 18px;
-            background:#00509e;
-            color:white;
-            text-decoration:none;
-            border-radius:5px;
-        }
+    background:linear-gradient(135deg,#0d3b66,#1d70b8,#3f88c5);
+    color:white;
+    padding:40px 10%;
+    text-align:center;
+    box-shadow:0px 4px 15px rgba(0,0,0,.25);
 
-        .button:hover{
-            background:#003366;
-        }
+}
 
-    </style>
+header h1{
+
+    font-family:'Playfair Display',serif;
+    font-size:42px;
+
+}
+
+header h2{
+
+    font-weight:400;
+    margin-top:8px;
+
+}
+
+header p{
+
+    margin-top:10px;
+    opacity:.95;
+
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+
+    background:white;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:15px;
+    position:sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0px 2px 8px rgba(0,0,0,.15);
+
+}
+
+nav a{
+
+    text-decoration:none;
+    color:#0d3b66;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#c1121f;
+
+}
+
+/* ================= MAIN ================= */
+
+.container{
+
+    width:88%;
+    max-width:1200px;
+    margin:auto;
+    padding:35px 0;
+
+}
+
+.card{
+
+    background:white;
+    border-radius:12px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0px 6px 20px rgba(0,0,0,.08);
+
+}
+
+.card h2{
+
+    color:#0d3b66;
+    border-left:6px solid #d62828;
+    padding-left:12px;
+    margin-bottom:18px;
+
+}
+
+/* ================= GRID ================= */
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+
+}
+
+.info{
+
+background:#f8fbff;
+padding:20px;
+border-left:6px solid #3f88c5;
+border-radius:8px;
+
+}
+
+.info h3{
+
+margin-bottom:10px;
+color:#0d3b66;
+
+}
+
+/* ================= TABLE ================= */
+
+table{
+
+width:100%;
+border-collapse:collapse;
+
+}
+
+th{
+
+background:#0d3b66;
+color:white;
+padding:12px;
+
+}
+
+td{
+
+padding:12px;
+border-bottom:1px solid #ddd;
+
+}
+
+tr:nth-child(even){
+
+background:#f6f9fc;
+
+}
+
+/* ================= BUTTON ================= */
+
+.button{
+
+display:inline-block;
+background:#d62828;
+color:white;
+padding:10px 20px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+
+}
+
+.button:hover{
+
+background:#0d3b66;
+
+}
+
+/* ================= ANNOUNCEMENT ================= */
+
+.notice{
+
+background:#fff7df;
+border-left:6px solid orange;
+padding:18px;
+border-radius:8px;
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+background:#0d3b66;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:40px;
+
+}
+
+@media(max-width:700px){
+
+header h1{
+
+font-size:30px;
+
+}
+
+nav{
+
+flex-wrap:wrap;
+
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>Prof. Supantha Pandit</h1>
-    <p>Course Webpages</p>
+
+<h1>Data Structures (IT2025)</h1>
+
+<h2>Summer Semester 2026</h2>
+
+<p>
+
+School of Technology<br>
+Dhirubhai Ambani University<br>
+Instructor: <strong>Prof. Supantha Pandit</strong>
+
+</p>
+
 </header>
 
 <nav>
-    <a href="#ds">Data Structures</a>
-    <a href="#algo">Advanced Algorithms</a>
-    <a href="#daa">Design and Analysis of Algorithms</a>
+
+<a href="#about">About</a>
+
+<a href="#schedule">Schedule</a>
+
+<a href="#material">Course Material</a>
+
+<a href="#assignments">Assignments</a>
+
+<a href="#announcements">Announcements</a>
+
+<a href="#contact">Contact</a>
+
 </nav>
 
 <div class="container">
 
-<div class="course" id="ds">
-<h2>Data Structures</h2>
+<section class="card" id="about">
 
-<p><strong>Course Description</strong></p>
+<h2>Course Information</h2>
+
+<div class="grid">
+
+<div class="info">
+
+<h3>Course Description</h3>
 
 <p>
-Introduction to data structures, algorithm analysis,
-linked lists, stacks, queues, trees, binary search trees,
-heaps, hash tables, graphs, and searching and sorting algorithms.
+
+Introduction to algorithm analysis, arrays, linked lists,
+stacks, queues, trees, binary search trees, heaps,
+hash tables, graphs and sorting algorithms.
+
 </p>
-
-<h3>Course Material</h3>
-
-<ul>
-<li>Lecture Notes</li>
-<li>Assignments</li>
-<li>Programming Exercises</li>
-<li>Practice Problems</li>
-<li>Announcements</li>
-</ul>
-
-<a href="#" class="button">Course Resources</a>
 
 </div>
 
-<div class="course" id="algo">
+<div class="info">
 
-<h2>Advanced Algorithms</h2>
+<h3>Course Details</h3>
 
 <p>
-Graph algorithms, dynamic programming, approximation algorithms,
-randomized algorithms, network flows, and NP-completeness.
+
+<strong>Credits:</strong> 4<br>
+
+<strong>Lecture:</strong> Mon, Wed, Thu<br>
+
+<strong>Language:</strong> C++<br>
+
+<strong>Evaluation:</strong> Assignments, Midsem, Endsem
+
 </p>
 
+</div>
+
+</div>
+
+</section>
+
+<section class="card" id="schedule">
+
+<h2>Lecture Schedule</h2>
+
+<table>
+
+<tr>
+
+<th>Week</th>
+
+<th>Topics</th>
+
+</tr>
+
+<tr>
+
+<td>1</td>
+
+<td>Introduction, Complexity Analysis</td>
+
+</tr>
+
+<tr>
+
+<td>2</td>
+
+<td>Arrays and Linked Lists</td>
+
+</tr>
+
+<tr>
+
+<td>3</td>
+
+<td>Stacks and Queues</td>
+
+</tr>
+
+<tr>
+
+<td>4</td>
+
+<td>Trees</td>
+
+</tr>
+
+<tr>
+
+<td>5</td>
+
+<td>Binary Search Trees</td>
+
+</tr>
+
+<tr>
+
+<td>6</td>
+
+<td>Heaps</td>
+
+</tr>
+
+<tr>
+
+<td>7</td>
+
+<td>Hashing</td>
+
+</tr>
+
+<tr>
+
+<td>8</td>
+
+<td>Graphs</td>
+
+</tr>
+
+<tr>
+
+<td>9</td>
+
+<td>Sorting Algorithms</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<section class="card" id="material">
+
+<h2>Course Material</h2>
+
 <ul>
+
 <li>Lecture Slides</li>
-<li>Reading Material</li>
-<li>Assignments</li>
-<li>Projects</li>
+
+<li>Lecture Notes</li>
+
+<li>Programming Exercises</li>
+
+<li>Tutorial Sheets</li>
+
+<li>Reference Books</li>
+
+<li>Previous Question Papers</li>
+
 </ul>
 
-</div>
+<br>
 
-<div class="course" id="daa">
+<a href="#" class="button">Download Resources</a>
 
-<h2>Design and Analysis of Algorithms</h2>
+</section>
 
-<p>
-Algorithm design paradigms including divide-and-conquer,
-greedy algorithms, dynamic programming, graph algorithms,
-and computational complexity.
-</p>
+<section class="card" id="assignments">
+
+<h2>Assignments</h2>
+
+<table>
+
+<tr>
+
+<th>Assignment</th>
+
+<th>Due Date</th>
+
+<th>Status</th>
+
+</tr>
+
+<tr>
+
+<td>Assignment 1</td>
+
+<td>15 July</td>
+
+<td>Open</td>
+
+</tr>
+
+<tr>
+
+<td>Assignment 2</td>
+
+<td>30 July</td>
+
+<td>Upcoming</td>
+
+</tr>
+
+<tr>
+
+<td>Programming Assignment</td>
+
+<td>10 August</td>
+
+<td>Upcoming</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<section class="card" id="announcements">
+
+<h2>Announcements</h2>
+
+<div class="notice">
 
 <ul>
-<li>Lecture Notes</li>
-<li>Tutorials</li>
-<li>Assignments</li>
-<li>Examinations</li>
+
+<li>Assignment 1 has been released.</li>
+
+<li>Quiz will be conducted next Monday.</li>
+
+<li>Please check the LMS regularly for updates.</li>
+
 </ul>
 
 </div>
+
+</section>
+
+<section class="card" id="contact">
+
+<h2>Instructor</h2>
+
+<p>
+
+<b>Prof. Supantha Pandit</b><br>
+
+Associate Professor<br>
+
+Computer Science & Information Systems<br>
+
+School of Technology<br>
+
+Dhirubhai Ambani University
+
+</p>
+
+<br>
+
+<p>
+
+Email: your-email@daiict.ac.in
+
+</p>
+
+</section>
 
 </div>
 
 <footer>
-© 2026 Prof. Supantha Pandit
+
+© 2026 Prof. Supantha Pandit | School of Technology | Dhirubhai Ambani University
+
 </footer>
 
 </body>
